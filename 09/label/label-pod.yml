@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: label-pod      # nolabel-pod => label-pod 변경
+  labels:              # 레이블(labels) 추가
+    name: mainui
+    rel: stable
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14
+    ports:
+    - containerPort: 80
